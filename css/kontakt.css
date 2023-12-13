@@ -1,0 +1,138 @@
+@charset "UTF-8";
+/* CSS dokument */
+
+.grid-form { 
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: repeat(4, auto);
+    width: 100%;
+    grid-template:
+        "item1"
+        "item2"
+        "item3"
+        "item4"
+        "item5";
+} 
+
+/* Style inputs and textareas */
+input[type=text], [type=tel], [type=email], textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid var(--green-color);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+/* Style the form */
+form {
+    border-radius: 20px;
+    background-color: var(--orange-color);
+    padding: 20px;
+}
+/* Style submit btn */
+input[type=submit] {
+
+}
+h1 {width: 100%}
+
+.flex-kontakt {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.flex-kontakt >  * {
+    flex: 1;
+}
+
+
+
+
+
+/* Tablet menu */
+@media only screen and (min-width: 700px) {
+    .h1 {
+        font-size: 76px;
+    }
+    .menu {
+        justify-content: center;
+    }
+    .logo {
+        flex: 1;
+    }
+    .closebtn {
+        text-align: right;
+    }
+    .grid-form { 
+        grid-template-columns: 1fr, 1fr; 
+        grid-template-rows: repeat(2, auto);
+        width: 100%;
+        grid-template:
+            "item1 item2"
+            "item3 item4"
+            "item5 item5";
+        grid-column-gap: 40px;
+    }
+    .flex-kontakt {
+        flex-direction: column;
+    }
+    .flex-kontakt > div {
+        margin-right: 0;
+    }
+}
+
+
+/* Desktop menu */
+@media only screen and (min-width: 960px) {
+    .h1 {
+        font-size: 120px !important;
+    }
+    .menu {
+        align-items: flex-start;     
+        flex-wrap: nowrap;
+        background: none;
+        max-width: 1200px;
+    }
+    .logo {
+        order: 2;
+    }
+    .item {
+        position: relative;
+        display: block; 
+        width: auto;
+    }
+    .item.one {
+        order: 1;
+    }
+    .item.two {
+        order: 3;
+    }
+    .sidemenu, .menu-open {
+        display: none;
+    }
+    .navbar {
+        background-color: var(--green-color);
+        display: flex;
+        justify-content: center;
+    }
+    .pagesettings {
+        padding: 120px 0;
+        max-width: 1200px;
+        margin: auto;
+    }
+    .grid-form { 
+        grid-template-columns: 1fr, 1fr; 
+        grid-template-rows: repeat(2, auto);
+        width: 100%;
+        grid-template:
+            "item1 item2"
+            "item3 item4"
+            "item5 item5";
+        grid-column-gap: 40px;
+    }
+    .flex-kontakt {
+        flex-direction: row;
+    }
+    .flex-kontakt > div {
+        margin-right: 40px;
+    }
+}

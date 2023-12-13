@@ -1,0 +1,167 @@
+@charset "UTF-8";
+/* CSS dokument */
+/*  */
+
+* {
+    /* allows us to include the padding and border in an element's total width and height */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0px;
+}
+
+/* Defining variables and setting height */
+html,body {
+    --green-color: #0C7A8E;
+    --green-color-hover: #248799;
+    --orange-color: #F85E40;
+    --orange-color-hover: #f96e53;
+    --bg-color: #F4F4F4;
+    --txt-color: #2c2c2c;
+    --txt-white-color-hover: #d4d4d4;
+    --txt-white-color: #ffffff;
+
+    --menu-txt-size: 32px;
+    --body-txt-size: 16px;
+
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: var(--bg-color);
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    color: var(--txt-color);
+}
+
+h1 {font-size: 48;}
+
+h2 {font-size: 36;}
+
+h3 {font-size: 24;}
+
+/* Setting padding for mobile version. Is redefined in media for tablet and desktop */
+.pagesettings {
+    padding: 0 40px 80px 40px;
+}
+
+/* Making images responsive */
+.responsive-img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Mobile menu */
+/* Style the button that is used to open the sidepanel, hidden in desktop */
+.menu-open {
+    position: fixed;
+    right: 0;
+    margin: 1em;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: var(--green-color);
+    color: var(--txt-white-color);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+}
+.menu-open:hover {
+    background-color: var(--green-color-hover);
+}
+/* The sidepanel menu, hidden in desktop */
+.sidemenu {
+    position: fixed;
+    height: 100%; /* Specify a height */
+    width: 0; /* 0 width - change this with JavaScript */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: var(--green-color);
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+/* Hiding desktop menu */
+.navbar {
+    display: none;
+    z-index: 1; /* Stay on top */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+/* Setting text color and remove line */
+a {
+    color: var(--txt-white-color);
+    text-decoration: none;
+}
+/* Remove list style, setting flex and alignment */
+.menu {
+    position: relative;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu li a {
+    display: block;
+    padding: 10px 5px;
+}
+.logo {
+    font-size: 20px;
+    padding: 7.5px 10px 7.5px 0;
+}
+.item {
+    order: 2;
+    padding: 10px;
+    font-size: var(--menu-txt-size);
+    width: 100%;
+    text-align: center;
+}
+.item a:hover {
+    color: var(--txt-white-color-hover);
+    text-decoration: underline;
+}
+.closebtn {
+    order: 1;
+    font-size: 20px;
+    padding: 9px 5px;
+}
+/* Position and style the close button (top right corner) */
+.sidemenu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+
+/* defining grid items for main */
+.item1 {
+    grid-area: item1;
+}
+.item2 {
+    grid-area: item2;
+}
+.item3 {
+    grid-area: item3;
+}
+.item4 {
+    grid-area: item4;
+}
+.item5 {
+    grid-area: item5;
+}
+.item6 {
+    grid-area: item6;
+}
