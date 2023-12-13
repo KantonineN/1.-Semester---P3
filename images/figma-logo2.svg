@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a259ff;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #1abcfe;
+      }
+
+      .cls-3 {
+        fill: #0acf83;
+      }
+
+      .cls-4 {
+        fill: #f24e1e;
+      }
+
+      .cls-5 {
+        fill: #ff7262;
+      }
+    </style>
+  </defs>
+  <path id="path0_fill" data-name="path0 fill" class="cls-3" d="M833,25c23,0,417-187,417-417v-417h-417c-23,0-417,187-417,417s187,417,417,417Z"/>
+  <path id="path1_fill" data-name="path1 fill" class="cls-1" d="M417,125c0-23,187-417,417-417h417v833h-417c-23,0-417-187-417-417Z"/>
+  <path id="path1_fill-2" data-name="path1 fill" class="cls-4" d="M417,417C417,187,603,0,833,0h417v833h-417c-23,0-417-187-417-417Z"/>
+  <path id="path2_fill" data-name="path2 fill" class="cls-5" d="M125,0h417c23,0,417,187,417,417s-187,417-417,417h-417V0Z"/>
+  <path id="path3_fill" data-name="path3 fill" class="cls-2" d="M2083,125c0,23-187,417-417,417s-417-187-417-417,187-417,417-417,417,187,417,417Z"/>
+</svg>
