@@ -135,20 +135,11 @@ footer {
     .closebtn {
         text-align: right;
     }
-    .item1 {
-        grid-column: 1/4;
-    }
-    .item2 {
-        grid-column: 4/span3;
-    }
-    .ph {
-        grid-column: span 3;
-    }
     #grid-home {
         grid-template-areas:
             "item1 item1 item1 item2 item2 item2"
             "ph ph ph ph ph ph"
-            "x p1 p2 p3 p4 x";
+            ". p1 p2 p3 p4 .";
             grid-template-columns: repeat(6, 1fr);
             grid-template-rows: repeat(3, auto);
     }
@@ -184,6 +175,7 @@ footer {
         display: block; 
         width: auto;
     }
+    /* Setting the order the items is being added on the navbar */
     .item.one {
         order: 1;
     }
@@ -202,6 +194,14 @@ footer {
         padding: 120px 0;
         max-width: 1200px;
         margin: auto;
+    }
+    #grid-home {
+        grid-template-areas:
+            "item1 item1 item1 item2 item2 item2"
+            "ph ph ph ph ph ph"
+            ". p1 p2 p3 p4 .";
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(3, auto);
     }
     .kontakt_forside {
         font-size: var(--menu-txt-size);
