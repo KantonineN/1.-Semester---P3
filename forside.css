@@ -1,0 +1,221 @@
+@charset "UTF-8";
+/* CSS dokument */
+
+ellipse1 {
+    fill: var(--green-color);
+}
+.ellipse1 {
+    fill: var(--green-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.ellipse-mobile {
+    display: block;
+}
+#ellipse-tablet {
+    display: none;
+}
+#ellipse-desktop {
+    display: none;
+}
+.ellipse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+}
+
+
+
+.program1 {
+    grid-area: p1;
+    text-align: center;
+}
+.program2 {
+    grid-area: p2;
+    text-align: center;
+}
+.program3 {
+    grid-area: p3;
+    text-align: center;
+}
+.program4 {
+    grid-area: p4;
+    text-align: center;
+}
+.program_headline {
+    grid-area: ph;
+    margin-top: 40px;
+    text-align: center;
+}
+.program-img {
+    width: 86px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+
+.btnimage {
+    width: 10%;
+    height: auto;
+    margin-top: 20px;
+}
+.kontakt_forside {
+    position: relative;
+    width: 55%;
+    aspect-ratio: 1/1;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin-bottom: -50%;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    color: var(--txt-white-color);
+    background-color: var(--orange-color);
+    border:none;
+    font-size: var(--body-txt-size);
+    cursor: pointer;
+}
+.kontakt_forside:hover {
+    background-color: var(--orange-color-hover);
+    transition: 0.5s;
+    transform: scale(1.05);
+}
+.txtbox_line_left {
+    border-left: 3px solid var(--txt-color);
+    padding-left: 20px;
+    margin: 20px 0;
+}
+#grid-home {
+    display: grid;
+    grid-template-areas:
+        "item2"
+        "item1"
+        "ph"
+        "p1"
+        "p2"
+        "p3"
+        "p4";
+    gap: 40px 40px;
+}
+
+
+footer {
+    padding: 40px;
+    background-color: var(--green-color);
+    color: var(--txt-white-color);
+}
+.footer-img {
+    width: 30px;
+    height: auto;
+    margin-right: 12px;
+}
+.footer-txt {
+    align-content: center;
+}
+
+
+
+/* Tablet menu */
+@media only screen and (min-width: 700px) {
+    .h1 {
+        font-size: 76px;
+    }
+    .menu {
+        justify-content: center;
+    }
+    .logo {
+        flex: 1;
+    }
+    .closebtn {
+        text-align: right;
+    }
+    #grid-home {
+        grid-template-areas:
+            "item1 item1 item1 item2 item2 item2"
+            "ph ph ph ph ph ph"
+            ". p1 p2 p3 p4 .";
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(3, auto);
+    }
+    .txtbox_line_left, .program-img {
+        margin: 40px 0;
+    }
+    .ellipse-mobile {
+        display: none;
+    }
+    #ellipse-tablet {
+        display: block;
+    }
+    #ellipse-desktop {
+        display: none;
+    }
+}
+/* Desktop menu */
+@media only screen and (min-width: 960px) {
+    .h1 {
+        font-size: 120px !important;
+    }
+    .menu {
+        align-items: flex-start;     
+        flex-wrap: nowrap;
+        background: none;
+        max-width: 1200px;
+    }
+    .logo {
+        order: 2;
+    }
+    .item {
+        position: relative;
+        display: block; 
+        width: auto;
+    }
+    /* Setting the order the items is being added on the navbar */
+    .item.one {
+        order: 1;
+    }
+    .item.two {
+        order: 3;
+    }
+    .sidemenu, .menu-open {
+        display: none;
+    }
+    .navbar {
+        background-color: var(--green-color);
+        display: flex;
+        justify-content: center;
+    }
+    .pagesettings {
+        padding: 120px 0;
+        max-width: 1200px;
+        margin: auto;
+    }
+    #grid-home {
+        grid-template-areas:
+            "item1 item1 item1 item2 item2 item2"
+            "ph ph ph ph ph ph"
+            ". p1 p2 p3 p4 .";
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(3, auto);
+    }
+    .kontakt_forside {
+        font-size: var(--menu-txt-size);
+    }
+    .txtbox_line_left, .program-img {
+        margin: 40px 0;
+    }
+    .ellipse-mobile {
+        display: none;
+    }
+    #ellipse-tablet {
+        display: none;
+    }
+    #ellipse-desktop {
+        display: block;
+    }
+}
