@@ -1,34 +1,9 @@
 @charset "UTF-8";
 /* CSS dokument */
 
-.program1 {
-    grid-area: p1;
-    text-align: center;
+.menu li:nth-child(1) {
+    background-color: var(--orange-color);
 }
-.program2 {
-    grid-area: p2;
-    text-align: center;
-}
-.program3 {
-    grid-area: p3;
-    text-align: center;
-}
-.program4 {
-    grid-area: p4;
-    text-align: center;
-}
-.program_headline {
-    grid-area: ph;
-    margin-top: 40px;
-    text-align: center;
-}
-.program-img {
-    width: 86px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-
 
 .btnimage {
     width: 10%;
@@ -71,55 +46,6 @@ h1 {
         "p4";
     gap: 40px 40px;
 }
-.btn-cv {
-    background-color: var(--orange-color);
-    color: var(--txt-white-color);
-    width: fit-content;
-    padding: 10px 30px;
-    border-radius: 36px;
-    cursor: pointer;
-}
-.btn-cv:hover {
-    background-color: var(--orange-color-hover);
-    transition: 0.2s;
-    transform: scale(1.05);
-}
-
-
-
-footer {
-    padding: 40px;
-    background-color: var(--green-color);
-    color: var(--txt-white-color);
-}
-.footer-container {
-    display: flex;
-    flex-direction: column;
-    row-gap: 40px;
-}
-.footer-container p {
-    font-size: var(--body-txt-size);
-    color: var(--txt-white-color);
-}
-.footer-container > * {
-    flex: 1;
-}
-.footer-img {
-    width: 30px;
-    height: 30px;
-    margin-right: 12px;
-}
-.footer-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-.img-txt_center {
-    display: flex;
-}
-.footer-margin {
-    margin-bottom: 20px;
-}
 
 
 
@@ -134,7 +60,7 @@ footer {
             grid-template-columns: repeat(6, 1fr);
             grid-template-rows: repeat(3, auto);
     }
-    .txtbox_line_left, .program-img {
-        margin: 40px 0;
+    .btn-secondary {
+        margin-top: var(--margin-afsnit);
     }
 }
