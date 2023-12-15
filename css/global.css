@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* CSS dokument */
-/*  */
+
 
 * {
     /* allows us to include the padding and border in an element's total width and height */
@@ -22,8 +22,8 @@ html,body {
 
     --menu-txt-size: 24px;
     --body-txt-size: 16px;
-    --h1-desktop: 100px;
-    --h1-tablet: 68px;
+    --h1-desktop: 120px;
+    --h1-desktop-small:80px;
 
     --corners: 20px;
 
@@ -41,6 +41,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     background-color: var(--bg-color);
+    font-family: 'Lato', sans-serif;
 }
 
 h1, h2, h3 {
@@ -48,9 +49,11 @@ h1, h2, h3 {
     margin-bottom: 0;
     padding-bottom: 0;
     color: var(--txt-color);
+    font-family: 'Playfair Display', serif;
 }
 
-h1 {font-size: 48px;}
+h1 {font-size: 17vw;
+    line-height: 100%;}
 
 h2 {font-size: 36px;}
 
@@ -83,6 +86,7 @@ p {color: var(--txt-color);}
     padding: 10px 15px;
     border: none;
     border-radius: 20px;
+    z-index: 99;
 }
 .menu-open:hover {
     background-color: var(--green-color-hover);
@@ -127,8 +131,14 @@ a {
     padding: 10px 5px;
 }
 .logo {
-    font-size: 20px;
-    padding: 7.5px 10px 7.5px 0;
+    margin: 1em 0 0 1em;
+}
+.logo_size {
+    background-image:  url(../files/logo.png);
+    background-size: contain;
+    height: 40px;
+    aspect-ratio: 1/1;
+    background-repeat: no-repeat;
 }
 .item {
     order: 2;
@@ -213,15 +223,19 @@ a {
 }
 /* Styling the buttons */
 .btn-primary {
+    font-family: 'Lato', sans-serif;
     background-color: var(--orange-color);
     color: var(--txt-white-color);
+    border: none;
     width: fit-content;
     padding: 10px 30px;
     border-radius: 36px;
     cursor: pointer;
     margin-top: var(--margin-afsnit-mobile);
+    transition-duration: 0.4s;
 }
 .btn-secondary {
+    font-family: 'Lato', sans-serif;
     border: 3px solid var(--orange-color);
     color: var(--orange-color);
     width: fit-content;
@@ -230,16 +244,29 @@ a {
     cursor: pointer;
     margin-top: var(--margin-afsnit-mobile);
     margin-right: 40px;
+    transition-duration: 0.4s;
 }
 .btn-primary:hover, .btn-secondary:hover {
+    color: var(--txt-white-color);
     background-color: var(--orange-color-hover);
     border-color: var(--orange-color-hover);
     transition: 0.2s;
     transform: scale(1.05);
 }
-/* Setting element to 50% */
-.width50 {
-    width: 50%;
+/* Slide in from left animation */
+.slide {
+    animation: slide 2s forwards;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translate(-100%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
 }
 /* Footer */
 footer {
@@ -271,6 +298,7 @@ footer {
 }
 .img-txt_center {
     display: flex;
+    align-items: center;
 }
 .footer-margin {
     margin-bottom: 20px;
@@ -283,7 +311,7 @@ footer {
 /* Tablet menu */
 @media only screen and (min-width: 700px) {
     h1 {
-        font-size: var(--h1-tablet);
+        font-size: 8.2vw !important;
     }
     .menu {
         justify-content: center;
@@ -291,8 +319,15 @@ footer {
     .logo {
         flex: 1;
     }
+    .logo_size {
+        height: 50px;
+    }
     .closebtn {
         text-align: right;
+    }
+    /* Setting element to 50% */
+    .width50 {
+        width: 66.66%;
     }
     footer {
         padding: 80px 40px;
@@ -310,9 +345,6 @@ footer {
 }
 /* Desktop menu */
 @media only screen and (min-width: 960px) {
-    h1 {
-        font-size: var(--h1-desktop) !important;
-    }
     .menu {
         align-items: flex-start;  
         flex-wrap: nowrap;
@@ -322,6 +354,10 @@ footer {
     .logo {
         order: 2;
         margin: 0 20px;
+    }
+    .logo_size {
+        margin: -20px 0;
+        height: 90px;
     }
     .item {
         position: relative;
@@ -349,8 +385,12 @@ footer {
     .pagesettings {
         padding: var(--padding-main-desktop-top) 100px var(--padding-main-desktop) 100px;
     }
-    .kontakt_forside {
-        font-size: var(--menu-txt-size);
+    /* Setting element to 50% */
+    .width50 {
+        width: 50%;
+    }
+    footer {
+        padding: 80px 100px;
     }
 }
 @media only screen and (min-width: 1400px) {
@@ -359,6 +399,12 @@ footer {
         padding: var(--padding-main-desktop-top) 0 var(--padding-main-desktop) 0;
         max-width: 1200px;
         margin: auto;
+    }
+    footer {
+        padding: 80px 0;
+    }
+    h1 {
+        font-size: var(--h1-desktop) !important;
     }
     .footer-container {
         max-width: 1200px;

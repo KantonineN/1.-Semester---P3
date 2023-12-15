@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikka - Kontakt</title>
+    <link rel="stylesheet" type="text/css" href="css/kontakt.css">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="scripts/opensidemenu.js"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <button type="button" class="menu-open" onclick="openNav()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <nav id="togglemenu" class="sidemenu">
+            <ul class="menu">
+                <li class="item one"><a href="https://nikkag.dk/">Forside</a></li>
+                <li class="item one"><a href="projekter.html">Projekter</a></li>
+                <li class="logo"><a href="https://nikkag.dk/">
+                    <div class="logo_size"></div>
+                </a></li>
+                <li class="item two"><a href="om_mig.html">Om mig</a></li>
+                <li class="item two"><a href="#">Kontakt</a></li>
+                <li class="closebtn"><a href="javascript:void(0)" onclick="closeNav()">&times;</a></li>
+            </ul>
+        </nav>
+        <nav class="navbar">
+            <ul class="menu">
+                <li class="item one"><a href="https://nikkag.dk/">Forside</a></li>
+                <li class="item one"><a href="projekter.html">Projekter</a></li>
+                <li class="logo"><a href="https://nikkag.dk/">
+                    <div class="logo_size"></div>
+                </a></li>
+                <li class="item two"><a href="om_mig.html">Om mig</a></li>
+                <li class="item two"><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="pagesettings">
+        <div id="margin">
+            <h1>Kontakt</h1>
+        </div>
+        <div id="flex-kontakt">
+            <div id="left-container">
+                <a class="img-txt_center kontakt-margin kontakt" href="https://maps.app.goo.gl/iKBoUHSjMgpBEWEc8" target="_blank">
+                    <div class="kontakt-img">
+                        <img src="files/person-orange.png" alt="Person ikon">
+                    </div>Nikka Grønquist</a>
+                <a class="img-txt_center kontakt-margin kontakt" href="tel:+4527289893">
+                    <div class="kontakt-img">
+                        <img src="files/mobile-orange.png" alt="Telefon ikon">
+                    </div>27 28 98 93</a>
+                <a class="img-txt_center kontakt" href="mailto:kontakt@nikkag.dk">
+                    <div class="kontakt-img">
+                        <img src="files/mail-orange.png" alt="Mail ikon">
+                    </div>Kontakt@nikkag.dk</a>
+            </div>
+            <form action="form-process.php" method="post">
+                <div class="grid-form">
+                    <div class="item1">
+                        <input 
+                            type="text" 
+                            name="name" 
+                            placeholder="Dit navn*" 
+                            maxlength="50"
+                            autocomplete="name"
+                            required>
+                    </div>
+                    <div class="item2">
+                        <input
+                            type="text"
+                            name="firma"
+                            placeholder="Virksomhed"
+                            maxlength="50"
+                            autocomplete="organization">
+                    </div>
+                    <div class="item3">
+                        <input 
+                            type="tel"
+                            name="telefon"
+                            placeholder="Telefon*"
+                            pattern="[0-9]{8}"
+                            required>
+                    </div>
+                    <div class="item4">
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="E-mail*"
+                            maxlength="50"
+                            autocomplete="email"
+                            required>
+                    </div>
+                    <div class="item5">
+                        <textarea
+                            name="message"
+                            placeholder="Din besked*"
+                            rows="5"
+                            cols="20"
+                            required></textarea>
+                    </div>
+                    <div class="item6">
+                        <input type="submit" value="Send" class="btn-primary">
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div>
+                <a class="img-txt_center footer-margin" href="https://maps.app.goo.gl/iKBoUHSjMgpBEWEc8" target="_blank">
+                    <div class="footer-img">
+                        <img src="files/person-white.png" alt="Person ikon">
+                    </div>Nikka Grønquist</a>
+                <a class="img-txt_center footer-margin" href="tel:+4527289893">
+                    <div class="footer-img">
+                        <img src="files/mobile-white.png" alt="Telefon ikon">
+                    </div>27 28 98 93</a>
+                <a class="img-txt_center" href="mailto:kontakt@nikkag.dk">
+                    <div class="footer-img">
+                        <img src="files/mail-white.png" alt="Mail ikon">
+                    </div>Kontakt@nikkag.dk</a>
+            </div>
+            <p>Tak fordi du tog tiden til at udforske min portfolio - Jeg håber at høre fra jer omkring fremtidigt samarbejde.</p>
+        </div>
+    </footer>
+</body>
+</html>

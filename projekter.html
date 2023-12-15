@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikka - Projekter</title>
+    <link rel="stylesheet" type="text/css" href="css/projekter.css">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="scripts/opensidemenu.js"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <button type="button" class="menu-open" onclick="openNav()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <nav id="togglemenu" class="sidemenu">
+            <ul class="menu">
+                <li class="item one"><a href="https://nikkag.dk/">Forside</a></li>
+                <li class="item one"><a href="#">Projekter</a></li>
+                <li class="logo"><a href="https://nikkag.dk/">
+                    <div class="logo_size"></div>
+                </a></li>
+                <li class="item two"><a href="om_mig.html">Om mig</a></li>
+                <li class="item two"><a href="kontakt.html">Kontakt</a></li>
+                <li class="closebtn"><a href="javascript:void(0)" onclick="closeNav()">&times;</a></li>
+            </ul>
+        </nav>
+        <nav class="navbar">
+            <ul class="menu">
+                <li class="item one"><a href="https://nikkag.dk/">Forside</a></li>
+                <li class="item one"><a href="#">Projekter</a></li>
+                <li class="logo"><a href="https://nikkag.dk/">
+                    <div class="logo_size"></div>
+                </a></li>
+                <li class="item two"><a href="om_mig.html">Om mig</a></li>
+                <li class="item two"><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="page">
+        <div class="headline">
+            <h1>Projekter</h1>
+            <p class="txtbox_line_left width50">Herunder ses et lille udsnit af forskellige ting jeg har lavet. Hvis der skulle opstå spørgsmål er i velkommen til at kontakte mig.</p>
+        </div>
+        <div id="grid-projekter">
+            <div class="item1 container-projekt">
+                <div class="image-wrap-xl">
+                        <img class="responsive-img" decoding="async" src="files/foto.jpg" alt="Forskellige billeder taget med min smartphone">
+                </div>
+                <div id="txt-container1" class="txt-container">
+                    <div class="txt-container-inner">
+                        <p>Foto og billedredigering</p>
+                        <h3>Foto</h3>
+                        <p class="txt">Forskellige billeder taget med min smartphone. Billederne har jeg efterfølgende redigeret i Adobe Lightroom</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item2 container-projekt">
+                <div class="image-wrap-m">
+                    <img class="responsive-img" decoding="async" src="files/security_agency.jpg" alt="Forsiden fra en hjemmeside jeg har lavet i WordPress">
+                </div>
+                <div id="txt-container2" class="txt-container">
+                    <div class="txt-container-inner">
+                        <p>Web Design</p>
+                        <h3>Hjemmeside</h3>
+                        <p class="txt">Hjemmeside jeg lavede i WordPress mens jeg var praktikant ved Moonstar Webdesign.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item3 container-projekt">
+                <div class="image-wrap-l">
+                        <img class="responsive-img" decoding="async" src="files/portraetter.jpg" alt="Forskellige  billeder jeg har taget i skolen medie lab">
+                </div>
+                <div id="txt-container3" class="txt-container">
+                    <div class="txt-container-inner">
+                        <p>Foto og billedredigering</p>
+                        <h3>Foto</h3>
+                        <p class="txt">Forskellige billder jeg har taget på skolen med et kamera.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item4 container-projekt">
+                <div class="image-wrap">
+                        <img class="responsive-img" decoding="async" src="files/selvportraet.jpg" alt="Selvportræt jeg har lavet i Illustrator efter et almindeligt billede">
+                </div>
+                <div id="txt-container4" class="txt-container">
+                    <div class="txt-container-inner">
+                        <p>Illustrator</p>
+                        <h3>Selvportræt</h3>
+                        <p class="txt">Selvportræt tegnet i Adobe Illustrator efter et almindeligt billede.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item5 container-projekt">
+                <div class="image-wrap-m">
+                    <img class="responsive-img" decoding="async" src="files/odenseren.jpg" alt="Billede af en hjemmeside jeg har lavet i WordPress">
+                </div>
+                <div id="txt-container5" class="txt-container">
+                    <div class="txt-container-inner">
+                        <p>Web Design</p>
+                        <h3>Hjemmeside</h3>
+                        <p class="txt">Hjemmeside jeg lavede i WordPress mens jeg var praktikant ved Moonstar Webdesign.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item6 container-projekt ">
+                <div class="image-wrap">
+                    <img decoding="async" class="responsive-img" src="files/folder.jpg" alt="Folder lavet til projekt 2 på 1. Semester">
+                </div>
+                <div id="txt-container6" class="txt-container">
+                    <div class="txt-container-inner">
+                        <p>Grafisk Design</p>
+                        <h3>Folder</h3>
+                        <p class="txt">Dette er en folder over det koncept jeg var med til at udvikle på første semester projekt 2.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div>
+                <a class="img-txt_center footer-margin" href="https://maps.app.goo.gl/iKBoUHSjMgpBEWEc8" target="_blank">
+                    <div class="footer-img">
+                        <img src="files/person-white.png" alt="Person ikon">
+                    </div>Nikka Grønquist</a>
+                <a class="img-txt_center footer-margin" href="tel:+4527289893">
+                    <div class="footer-img">
+                        <img src="files/mobile-white.png" alt="Telefon ikon">
+                    </div>27 28 98 93</a>
+                <a class="img-txt_center" href="mailto:kontakt@nikkag.dk">
+                    <div class="footer-img">
+                        <img src="files/mail-white.png" alt="Mail ikon">
+                    </div>Kontakt@nikkag.dk</a>
+            </div>
+            <p>Tak fordi du tog tiden til at udforske min portfolio - Jeg håber at høre fra jer omkring fremtidigt samarbejde.</p>
+        </div>
+    </footer>
+</body>
+</html>

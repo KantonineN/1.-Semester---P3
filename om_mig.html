@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikka - Om mig</title>
+    <link rel="stylesheet" type="text/css" href="css/om_mig.css">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="scripts/opensidemenu.js"></script>
+    <script src="scripts/download_button.js"></script>
+</head>
+<body>
+    <header>
+        <div>
+            <button type="button" class="menu-open" onclick="openNav()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <nav id="togglemenu" class="sidemenu">
+            <ul class="menu">
+                <li class="item one"><a href="https://nikkag.dk/">Forside</a></li>
+                <li class="item one"><a href="projekter.html">Projekter</a></li>
+                <li class="logo"><a href="https://nikkag.dk/">
+                    <div class="logo_size"></div>
+                </a></li>
+                <li class="item two"><a href="#">Om mig</a></li>
+                <li class="item two"><a href="kontakt.html">Kontakt</a></li>
+                <li class="closebtn"><a href="javascript:void(0)" onclick="closeNav()">&times;</a></li>
+            </ul>
+        </nav>
+        <nav class="navbar">
+            <ul class="menu">
+                <li class="item one"><a href="https://nikkag.dk/">Forside</a></li>
+                <li class="item one"><a href="projekter.html">Projekter</a></li>
+                <li class="logo"><a href="https://nikkag.dk/">
+                    <div class="logo_size"></div>
+                </a></li>
+                <li class="item two"><a href="#">Om mig</a></li>
+                <li class="item two"><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="grid-om_mig" class="pagesettings">
+        <div class="headline slide">
+            <h1>Hvem er jeg?</h1>
+        </div>
+        <div class="item1">
+            <div id="blob-size">
+                <div id="blob"></div>
+            </div>
+        </div>
+        <div class="item2 slide">
+            <p id="txtbox_line_left">Som multimediedesignstuderende ligger min passion i området mellem kreativitet og teknologi. Jeg er nysgerrig og elsker at lære. Med et skarpt grafisk øje skaber jeg en kombination af visuelt tiltalende og brugervenlige digitale løsninger. Jeg har en struktureret arbejdsstil og er dedikeret til detaljer og kreativitet. Jeg finder glæde i at skabe og omsætte idéer til virkelighed. Lad os sammen udforske den spændende verden af multimediedesign!</p>
+            <div class="btn-container">
+                <button type="button" class="btn-secondary" onclick="download('files/cv.pdf')">
+                    Download CV
+                </button>
+                <button type="button" class="btn-primary" onclick="window.location.href='kontakt.html';">
+                    Kontakt
+                </button>
+            </div>
+        </div>
+        <h2 class="program_headline">Programmer jeg bruger</h2>
+        <div class="program1">
+            <img class="program-img" src="files/adobe_creative_cloud_rainbow_icon.svg" alt="Adobe Creative Cloud ikon">
+            <h3>Adobe Creative<br>Cloud</h3>
+        </div>
+        <div class="program2">
+            <img class="program-img" src="files/figma-logo.svg" alt="Figma ikon">
+            <h3>Figma</h3>
+        </div>
+        <div class="program4">
+            <img class="program-img" src="files/wordpress-logo.svg" alt="WordPress ikon">
+            <h3>WordPress</h3>
+        </div>
+        <div class="program3">
+            <img class="program-img" src="files/visual_studio_code_icon.svg" alt="Visual Studio Code ikon">
+            <h3>HTML & CSS</h3>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div>
+                <a class="img-txt_center footer-margin" href="https://maps.app.goo.gl/iKBoUHSjMgpBEWEc8" target="_blank">
+                    <div class="footer-img">
+                        <img src="files/person-white.png" alt="Person ikon">
+                    </div>Nikka Grønquist</a>
+                <a class="img-txt_center footer-margin" href="tel:+4527289893">
+                    <div class="footer-img">
+                        <img src="files/mobile-white.png" alt="Telefon ikon">
+                    </div>27 28 98 93</a>
+                <a class="img-txt_center" href="mailto:kontakt@nikkag.dk">
+                    <div class="footer-img">
+                        <img src="files/mail-white.png" alt="Mail ikon">
+                    </div>Kontakt@nikkag.dk</a>
+            </div>
+            <p>Tak fordi du tog tiden til at udforske min portfolio - Jeg håber at høre fra jer omkring fremtidigt samarbejde.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -5,7 +5,7 @@
     background-color: var(--orange-color);
 }
 
-.btnimage {
+#btnimage {
     width: 10%;
     height: auto;
     margin-top: 20px;
@@ -31,9 +31,6 @@
     transition: 0.2s;
     transform: scale(1.02) translate(0, -50%);
 }
-h1 {
-    line-height: 100%;
-}
 #grid-home {
     display: grid;
     grid-template-areas:
@@ -46,8 +43,11 @@ h1 {
         "p4";
     gap: 40px 40px;
 }
-
-
+.item1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 
 /* Tablet menu */
@@ -62,5 +62,12 @@ h1 {
     }
     .btn-secondary {
         margin-top: var(--margin-afsnit);
+    }
+}
+
+/* Desktop menu */
+@media only screen and (min-width: 960px) {
+    .kontakt_forside {
+        font-size: var(--menu-txt-size);
     }
 }

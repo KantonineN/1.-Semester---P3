@@ -14,19 +14,39 @@
         "item4"
         "item5"
         "item6";
-    gap: 40px 40px;
+    gap: 10px 40px;
+    animation: slide 1s forwards;
+}
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translate(0, 200%);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
 }
 .item1, .item2, .item3, .item4, .item5, .item6 {
     text-align: center;
 }
-.image-wrap {
+.headline {
+    margin-bottom: 40px;
+}
+.image-wrap,
+.image-wrap-m,
+.image-wrap-l,
+.image-wrap-xl {
     position: relative;
     overflow: hidden;
     border-radius: var(--corners);
     width: 100%;
-    aspect-ratio: 3/2;
+    aspect-ratio: 1/1;
 }
-.image-wrap:hover {
+.image-wrap:hover,
+.image-wrap-m:hover,
+.image-wrap-l:hover,
+.image-wrap-xl:hover {
     transform: scale(1.1);
 }
 .image-wrap img {
@@ -35,23 +55,111 @@
     object-fit: cover;
     object-position: top center;
     transition: transform 0.3s ease-in-out;
-    transition: all 5s ease-in-out;
+    transition: all 5s ease;
 }
-.image-wrap:hover img {
+.image-wrap-m img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.3s ease-in-out;
+    transition: all 15s ease;
+}
+.image-wrap-l img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.3s ease-in-out;
+    transition: all 20s ease;
+}
+.image-wrap-xl img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.3s ease-in-out;
+    transition: all 30s ease;
+}
+.image-wrap:hover img,
+.image-wrap-m:hover img,
+.image-wrap-l:hover img,
+.image-wrap-xl:hover img {
     object-position: bottom center;
 }
-.sprite {
-    width: 100%;
-    height: 800px;
-    background: url('../images/sprite-animation-ws.jpg') 0 0 no-repeat;
-    animation: play 2.5s steps(11) infinite;
+.image-wrap:active img,
+.image-wrap-m:active img,
+.image-wrap-l:active img,
+.image-wrap-xl:active img {
+    object-position: bottom center;
 }
-@keyframes play {
-    0% {background-position: 0px;}
-    100% { background-position: -5500px;}
+.container-projekt {
+    display: grid;
+    justify-items: center;
 }
-
-
+#txt-container1,
+#txt-container2,
+#txt-container3,
+#txt-container4,
+#txt-container5,
+#txt-container6 {
+    position: relative;
+    width: 80%;
+    height: 190px;
+}
+.txt-container {    
+    /* overall animation container */
+	height: 0; 
+	overflow: hidden;
+	transition-property: height;
+	transition-duration: 1s;
+	perspective: 1000px;
+	transform-style: preserve-3d;
+    margin-top: -40px;
+}
+.txt-container-inner {
+    background-color: var(--txt-white-color);
+    box-shadow: 0 0 9px rgb(0 0 0 / 12%);
+    padding: 30px 20px 20px 20px;
+    border-radius: 20px;
+    text-align: left;
+    z-index: 1;
+}
+.txt-container-inner p {
+    font-size: 0.8em;
+}
+.txt {
+    margin-top: 10px;
+    font-size: 0.8em;
+    /* animated, "folded" block */
+	height: 0px; 
+	transition-property: all; 
+	transition-duration: 1s;
+	transform: rotateX(-90deg);
+	transform-origin: top;
+}
+/* Hover states to trigger animations */
+#txt-container1:hover .txt,
+#txt-container2:hover .txt,
+#txt-container3:hover .txt,
+#txt-container4:hover .txt,
+#txt-container5:hover .txt,
+#txt-container6:hover .txt	{
+	transform: rotateX(0deg); 
+	height: 75px; 
+}
+#txt-container1:active .txt,
+#txt-container2:active .txt,
+#txt-container3:active .txt,
+#txt-container4:active .txt,
+#txt-container5:active .txt,
+#txt-container6:active .txt	{
+	transform: rotateX(0deg); 
+	height: 75px; 
+}
+.page {
+    padding: 80px 40px 10px 40px;
+}
 
 /* Tablet body */
 @media only screen and (min-width: 700px) {
@@ -77,5 +185,16 @@
             "item4 item5 item6";
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(3, auto);
+    }
+    .page {
+        padding: var(--padding-main-desktop-top) 100px 20px 100px;
+    }
+}
+@media only screen and (min-width: 1400px) {
+    /* Remove padding if main area is smaller than the max including the padding */
+    .page {
+        padding: var(--padding-main-desktop-top) 0 20px 0;
+        max-width: 1200px;
+        margin: auto;
     }
 }
